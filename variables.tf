@@ -18,6 +18,7 @@ variable "gcp_project" {
   type        = string
   description = "The GCP project to deploy the runner into."
 }
+
 variable "gcp_zone" {
   type        = string
   description = "The GCP zone to deploy the runner into."
@@ -37,6 +38,11 @@ variable "ci_runner_instance_type" {
 The instance type used for the runner. This shouldn't need to be changed because the builds
 themselves run on separate worker instances.
 EOF
+}
+variable "disk_size" {
+  type        = number
+  description = "Disk Size"
+  default = 30
 }
 variable "ci_concurrency" {
   type        = number
