@@ -68,7 +68,7 @@ resource "google_compute_instance" "ci_runner" {
   }
 
   network_interface {
-    subnetwork = "default"
+    network = "default"
 
     access_config {
       // Ephemeral IP
