@@ -62,13 +62,13 @@ resource "google_compute_instance" "ci_runner" {
   boot_disk {
     initialize_params {
       image = "centos-cloud/centos-7"
-      size  = "10"
+      size  = "30"
       type  = "pd-standard"
     }
   }
 
   network_interface {
-    network = "default"
+    subnetwork = "default"
 
     access_config {
       // Ephemeral IP
