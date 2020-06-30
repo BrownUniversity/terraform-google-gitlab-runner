@@ -44,6 +44,11 @@ variable "disk_size" {
   description = "Disk Size"
   default = 30
 }
+variable "network_name" {
+  type        = string
+  description = "Network Name"
+  default = "default"
+}
 variable "ci_concurrency" {
   type        = number
   default     = 1
